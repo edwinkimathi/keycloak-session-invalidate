@@ -1,0 +1,30 @@
+
+# spring session
+spring:
+  session:
+    store-type: redis
+    timeout: 3600
+# keycloak
+
+keycloak:
+  autodetect-bearer-only: true
+  realm: 'demo'
+  ssl-required: NONE
+  resource: 'demo'
+  auth-server-url: 'http://localhost:8180/auth'
+  credentials:
+    secret: f3f53319-8854-41f3-a408-bfe2acabfa05
+
+
+# logging
+logging:
+  level:
+    com:
+      example: TRACE
+    org:
+      springframework:
+        security:
+          web:
+            session: DEBUG
+      keycloak:
+        adapters: DEBUG
